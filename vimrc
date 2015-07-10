@@ -36,6 +36,10 @@ Bundle "Raimondi/delimitMate"
 Bundle "evanmiller/nginx-vim-syntax"
 Bundle "Lokaltog/vim-easymotion"
 Bundle 'Valloric/YouCompleteMe'
+Bundle "ervandew/screen"
+Bundle "wincent/command-t"
+Bundle "rygwdn/vim-conque"
+Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
 
 " Theme
 Bundle "tomasr/molokai"
