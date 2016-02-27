@@ -41,6 +41,10 @@ Bundle "wincent/command-t"
 Bundle "rygwdn/vim-conque"
 Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
 
+
+" For nodejs
+Plugin 'digitaltoad/vim-jade'
+
 " Theme
 Bundle "tomasr/molokai"
 
@@ -58,6 +62,7 @@ Plugin 'elixir-lang/vim-elixir'
 Bundle 'carlosgaldino/elixir-snippets'
 Plugin 'derekwyatt/vim-scala'
 Bundle 'vim-ruby/vim-ruby'
+Plugin 'fatih/vim-go'
 
 call vundle#end() " 必须
 filetype plugin indent on " 必须

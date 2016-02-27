@@ -1,47 +1,27 @@
-#for koa
-alias node='node --harmony'
-#for nvm
-export NVM_IOJS_ORG_VERSION_LISTING="https://npm.taobao.org/mirrors/iojs/index.tab"
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-#ruboto
-export ANDROID_HOME=/Users/masato/Library/Android/sdk
-export PATH=$HOME/.node/bin:$ANDROID_HOME/build-tools/22.0.1:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH
-#vsftpd
-alias vsftpd="sudo /opt/local/sbin/vsftpd"
-alias vim="/usr/local/Cellar/vim/7.4.712/bin/vim"
-#for solve rake issue
-#alias rake="noglob bundle exec rake"
-alias rake="noglob rake"
-
-alias connecttopoc="ssh masato_wang@10.1.147.182"
-
-#zsh alis
-alias cls=clear
+#user custom setting
+alias cls="clear"
+alias vimcleaner="kill -9 `ps auxww|grep YouCompleteMe|awk '{print $2}'`"
+export GOPATH="/home/masato/Dev/golang"
+export DOCKER_HOST="localhost:4243"
+alias docker-daemon-start="sudo docker daemon -H tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock"
+[[ -s /home/syguer/.nvm/nvm.sh ]] && . /home/syguer/.nvm/nvm.sh  # This loads NVM
+#for rvm
+source ~/.profile
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-#the fuck
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
-# zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
+  export ZSH=/home/masato/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="masato"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git rake rails rvm ruby jruby gem git-extras)
-
-
+ZSH_THEME="miloshadzic"
+#ZSH_THEME="cordial"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -74,9 +54,15 @@ plugins=(git rake rails rvm ruby jruby gem git-extras)
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH:/opt/pig-0.12.0/bin
+  export PATH="$GOPATH/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/masato/.rvm/bin:/home/masato/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -105,13 +91,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#
-#
-alias vim="/usr/bin/vim"
-#cstoum terminal
-#export PS1="[ \[\033[36m\]\u\[\033[m\]@\[\033[30m\]\h:\[\033[33;1m\]\w\[\033[m\] \[\e[1;31m\]♡Ruby\[\e[m\] ]"
-#export CLICOLOR=1
-#export LSCOLORS=ExFxBxDxCxegedabagacad
-alias ls='ls -GFh'
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export NVM_DIR="/home/masato/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
