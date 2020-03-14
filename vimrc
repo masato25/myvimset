@@ -33,7 +33,6 @@ Bundle "msanders/snipmate.vim"
 Bundle "altercation/vim-colors-solarized"
 Bundle "xsbeats/vim-blade"
 Bundle "Raimondi/delimitMate"
-Bundle "evanmiller/nginx-vim-syntax"
 Bundle "Lokaltog/vim-easymotion"
 Bundle 'Valloric/YouCompleteMe'
 Bundle "ervandew/screen"
