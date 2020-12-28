@@ -50,8 +50,8 @@ augroup vimrcEx
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
 
-  " Automatically wrap at 80 characters for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+  " Automatically wrap at 120 characters for Markdown
+  autocmd BufRead,BufNewFile *.md setlocal textwidth=120
 augroup END
 
 " Softtabs, 2 spaces
@@ -80,7 +80,7 @@ colorscheme molokai
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
-" Make it obvious where 80 characters is
+" Make it obvious where 120 characters is
 set textwidth=120
 set colorcolumn=+1
 
@@ -208,5 +208,3 @@ nnoremap <Leader>k :w !mix test %:p <CR>
 "if filereadable($HOME . "/.vimrc.local")
 ""  source ~/.vimrc.local
 "endif
-
-

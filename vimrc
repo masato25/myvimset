@@ -1,13 +1,13 @@
-" 将下面配置文件加入到.vimrc文件中
-set nocompatible " 必须
-filetype off     " 必须
+set nocompatible " be iMproved, required
+filetype off " required
 
-" 将Vundle加入运行时路径中(Runtime path)
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" 使用Vundle管理插件，必须
+" let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+
 
 "
 " 其他插件
@@ -39,6 +39,7 @@ Bundle "ervandew/screen"
 Bundle "wincent/command-t"
 Bundle "rygwdn/vim-conque"
 Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
+Plugin 'tomlion/vim-solidity'
 
 
 " For nodejs
@@ -54,7 +55,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle "jelera/vim-javascript-syntax"
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rails'
+" Bundle 'tpope/vim-rails'
 
 " Progrmming languange
 Plugin 'elixir-lang/vim-elixir'
@@ -63,8 +64,9 @@ Plugin 'derekwyatt/vim-scala'
 Bundle 'vim-ruby/vim-ruby'
 Plugin 'fatih/vim-go'
 
-call vundle#end() " 必须
-filetype plugin indent on " 必须
+" All of your Plugins must be added before the following line
+call vundle#end() " required
+filetype plugin indent on " required
 
 " leader key!
 let mapleader=","
